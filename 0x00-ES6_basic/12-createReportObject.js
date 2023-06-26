@@ -5,7 +5,7 @@ export default function createReportObject(employeesList) {
 
   for (const dep in employeesList) {
     if (Object.hasOwn(employeesList, dep)) {
-      allEmployees[dep] = employeesList[dep];
+      allEmployees[dep] = [...employeesList[dep]];
     }
   }
 
