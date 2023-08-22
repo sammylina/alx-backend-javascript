@@ -5,7 +5,7 @@ process.stdin.setEncoding('utf-8');
 console.log('Welcome to Holberton School, What is your name?');
 process.stdin.on('readable', () => {
   const data = process.stdin.read();
-  if (data) {
+  if (data !== null) {
     process.stdout.write(`Your name is: ${data}`);
   }
   // process.exit(0)
